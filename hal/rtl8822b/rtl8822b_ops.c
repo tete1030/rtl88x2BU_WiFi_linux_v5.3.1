@@ -296,8 +296,8 @@ static void Hal_EfuseParseChnlPlan(PADAPTER adapter, u8 *map, u8 autoloadfail)
 {
 	hal_com_config_channel_plan(
 		adapter,
-		map ? &map[EEPROM_COUNTRY_CODE_8822B] : NULL,
-		map ? map[EEPROM_ChannelPlan_8822B] : 0xFF,
+		"CN", // map ? &map[EEPROM_COUNTRY_CODE_8822B] : NULL,
+		"0x48", // map ? map[EEPROM_ChannelPlan_8822B] : 0xFF,
 		adapter->registrypriv.alpha2,
 		adapter->registrypriv.channel_plan,
 		RTW_CHPLAN_REALTEK_DEFINE,
